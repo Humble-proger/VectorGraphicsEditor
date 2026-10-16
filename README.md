@@ -39,7 +39,7 @@
 
 ### Сборка и запуск
 ```bash
-git clone https://github.com/ваш-username/VectorGraphicsEditor.git
+git clone https://github.com/Humble-proger/VectorGraphicsEditor.git
 cd VectorGraphicsEditor
 dotnet restore
 dotnet run --project VectorGraphicsEditor

@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <UserSecretsId>60c726f8-8072-42be-a301-cf292fdec702</UserSecretsId>
+  </PropertyGroup>
+
+   <ItemGroup>
+
+    <!-- Включаем все ресурсы из Assets -->
+    <AvaloniaResource Include="Assets/**" />
+
+    <!-- Включаем все изображения из папки ToolBars -->
+    <AvaloniaResource Include="Views/pictures/ToolBars/**" />
+
+    <!-- Удаляем ненужные файлы -->
+    <None Remove="Assets/layers.png" />
+    <None Remove="Views/pictures/layers/" />
+    <None Remove="Views/pictures/ToolBars/chevron-down.png" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <None Remove="Views\pictures\settings\create.png" />
+    <None Remove="Views\pictures\settings\open3.png" />
+    <None Remove="Views\pictures\settings\save.png" />
+    <None Remove="Views\pictures\settings\save_as.png" />
+    <None Remove="Views\pictures\settings\settings.png" />
+    <None Remove="Views\pictures\ToolBars\cursor3.png" />
+    <None Remove="Views\pictures\ToolBars\erase.png" />
+    <None Remove="Views\pictures\ToolBars\filling.png" />
+    <None Remove="Views\pictures\ToolBars\highlight.png" />
+    <None Remove="Views\pictures\ToolBars\stylus.png" />
+    <None Remove="Views\pictures\ToolBars\thickness.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1">
+      <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+      <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="9.0.2" />
+    <PackageReference Include="System.Composition.Hosting" Version="9.0.2" />
+    <PackageReference Include="System.Composition.TypedParts" Version="9.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VectorGraphicsEditor.Geometry\Geometry.csproj" />
+    <ProjectReference Include="..\VectorGraphicsEditor.IO\IO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\ToolBars.axaml.cs">
+      <DependentUpon>ToolBars.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Footer.axaml.cs">
+      <DependentUpon>Footer.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

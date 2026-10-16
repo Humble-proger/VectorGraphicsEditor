@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicsApp", "VectorGraphicsEditor\GraphicsApp.csproj", "{EF011138-64AE-49B0-ABCC-1920187554F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry", "VectorGraphicsEditor.Geometry\Geometry.csproj", "{7237595E-9B6E-4BA2-8281-3D9FB3F583E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IO", "VectorGraphicsEditor.IO\IO.csproj", "{E51D27A4-51EF-4078-A254-6557D130354E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF011138-64AE-49B0-ABCC-1920187554F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF011138-64AE-49B0-ABCC-1920187554F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF011138-64AE-49B0-ABCC-1920187554F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF011138-64AE-49B0-ABCC-1920187554F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7237595E-9B6E-4BA2-8281-3D9FB3F583E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7237595E-9B6E-4BA2-8281-3D9FB3F583E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7237595E-9B6E-4BA2-8281-3D9FB3F583E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7237595E-9B6E-4BA2-8281-3D9FB3F583E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E51D27A4-51EF-4078-A254-6557D130354E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E51D27A4-51EF-4078-A254-6557D130354E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E51D27A4-51EF-4078-A254-6557D130354E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E51D27A4-51EF-4078-A254-6557D130354E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
